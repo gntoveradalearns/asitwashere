@@ -1,0 +1,15 @@
+{
+  "name": "asitwashere",
+  "private": true,
+  "description": "Art portfolio. The build copies public/ to dist/ and adds a link-preview card and share page for every piece.",
+  "scripts": {
+    "build": "node scripts/build.mjs && node scripts/check.mjs"
+  },
+  "dependencies": {
+    "@resvg/resvg-js": "^2.6.2",
+    "sharp": "^0.35.5"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

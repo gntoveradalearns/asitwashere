@@ -1,0 +1,25 @@
+{
+  "items": [
+    {
+      "title": "sample photograph one",
+      "year": "2026",
+      "medium": "digital photograph",
+      "src": "images/sample-1.svg",
+      "alt": "placeholder image"
+    },
+    {
+      "title": "sample photograph two",
+      "year": "2025",
+      "medium": "film, scanned",
+      "src": "images/sample-3.svg",
+      "alt": "placeholder image"
+    },
+    {
+      "title": "sample photograph three",
+      "year": "2024",
+      "medium": "digital photograph",
+      "src": "images/sample-5.svg",
+      "alt": "placeholder image"
+    }
+  ]
+}

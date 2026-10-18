@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+<rect width="1200" height="800" fill="#DCDDD8"/>
+<path d="M144 576 C 360 160, 660 720, 1056 240" fill="none" stroke="#5C6670" stroke-width="6" stroke-linecap="round"/>
+<circle cx="840" cy="544" r="72" fill="none" stroke="#5C6670" stroke-width="6"/>
+<text x="72" y="744" font-family="sans-serif" font-size="34" fill="#5C6670">sample 6: replace with your work</text>
+</svg>

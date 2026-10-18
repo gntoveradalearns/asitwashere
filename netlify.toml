@@ -1,0 +1,57 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+[functions]
+  directory = "netlify/functions"
+
+# Each piece normally has a generated share page (with its link-preview card) at /share/<kind>/<id>/.
+# If one is missing, Netlify uses these rules and sends the visitor straight to the piece instead.
+[[redirects]]
+  from = "/share/photo/:id"
+  to = "/photos.html?open=:id"
+  status = 302
+
+[[redirects]]
+  from = "/share/drawing/:id"
+  to = "/drawings.html?open=:id"
+  status = 302
+
+[[redirects]]
+  from = "/share/musing/:id"
+  to = "/musings.html?open=:id"
+  status = 302
+
+# Always use https (Netlify also does this by itself once https is on for the site).
+[[redirects]]
+  from = "http://*"
+  to = "https://:splat"
+  status = 301
+  force = true
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains"
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "SAMEORIGIN"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), interest-cohort=()"
+
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+
+[[headers]]
+  for = "/previews/*"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"
+
+[[headers]]
+  for = "/favicon*"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"

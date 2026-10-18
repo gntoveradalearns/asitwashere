@@ -1,0 +1,16 @@
+{
+  "items": [
+    {
+      "title": "sample piece one",
+      "year": "2026",
+      "excerpt": "replace this with the opening line of something you wrote.",
+      "body": "replace this with the full text of your piece. each string in this list becomes one paragraph.\n\nadd as many paragraphs as you need."
+    },
+    {
+      "title": "sample piece two",
+      "year": "2025",
+      "excerpt": "a second placeholder, so you can see how a list of pieces looks.",
+      "body": "delete these samples and add your own in public/data/works.json."
+    }
+  ]
+}

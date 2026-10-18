@@ -1,0 +1,25 @@
+{
+  "items": [
+    {
+      "title": "sample drawing one",
+      "year": "2026",
+      "medium": "ink on paper",
+      "src": "images/sample-2.svg",
+      "alt": "placeholder image"
+    },
+    {
+      "title": "sample drawing two",
+      "year": "2025",
+      "medium": "pencil on paper",
+      "src": "images/sample-4.svg",
+      "alt": "placeholder image"
+    },
+    {
+      "title": "sample drawing three",
+      "year": "2024",
+      "medium": "marker and ballpoint",
+      "src": "images/sample-6.svg",
+      "alt": "placeholder image"
+    }
+  ]
+}

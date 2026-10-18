@@ -1,0 +1,114 @@
+# Editor settings. Change the repo line below to your own GitHub repo (see SETUP-EDITOR.md).
+backend:
+  name: github
+  repo: YOUR-GITHUB-USERNAME/YOUR-REPO-NAME
+  branch: main
+
+# uploaded images are saved here, and referenced by this path in the content files
+media_folder: public/images
+public_folder: images
+
+collections:
+  - name: content
+    label: Site content
+    files:
+      - name: photos
+        label: Photographs
+        file: public/data/photos.json
+        fields:
+          - label: Photographs
+            label_singular: photograph
+            name: items
+            widget: list
+            add_to_top: true
+            summary: "{{fields.title}}"
+            hint: "Drag to reorder. The first one is shown first on the site."
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Image, name: src, widget: image }
+              - { label: Year, name: year, widget: string, required: false }
+              - { label: Medium, name: medium, widget: string, required: false }
+              - { label: Image description (for screen readers), name: alt, widget: string, required: true, hint: "Describe what's in the picture in a short sentence. Screen readers and search engines use it." }
+
+      - name: drawings
+        label: Drawings
+        file: public/data/drawings.json
+        fields:
+          - label: Drawings
+            label_singular: drawing
+            name: items
+            widget: list
+            add_to_top: true
+            summary: "{{fields.title}}"
+            hint: "Drag to reorder. The first one is shown first on the site."
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Image, name: src, widget: image }
+              - { label: Year, name: year, widget: string, required: false }
+              - { label: Medium, name: medium, widget: string, required: false }
+              - { label: Image description (for screen readers), name: alt, widget: string, required: true, hint: "Describe what's in the picture in a short sentence. Screen readers and search engines use it." }
+
+      - name: musings
+        label: Musings
+        file: public/data/musings.json
+        fields:
+          - label: Musings
+            label_singular: musing
+            name: items
+            widget: list
+            add_to_top: true
+            summary: "{{fields.title}}"
+            hint: "Drag to reorder. The first one is shown first on the site."
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Year, name: year, widget: string, required: false }
+              - { label: Short preview, name: excerpt, widget: text, required: false, hint: "One or two lines shown in the list and on the home page." }
+              - { label: Text, name: body, widget: text, hint: "Leave a blank line between paragraphs." }
+
+      - name: settings
+        label: About, contact and links
+        file: public/site.config.json
+        fields:
+          - { label: Site name, name: name, widget: string }
+          - { label: Tagline, name: tagline, widget: string }
+          - { label: Email, name: email, widget: string, required: false, hint: "Shown on the About page." }
+          - { label: Discourage saving images and copying text, name: protect, widget: boolean, default: true, hint: "Blocks right-click saving, dragging and text selection. Visitors can still share. It cannot stop screenshots." }
+          - { label: Website address, name: siteUrl, widget: string, required: false, hint: "Your site's full address, e.g. https://asitwashere.com. Used for link previews. Leave empty to use the Netlify address." }
+          - { label: Show the artwork in link previews, name: previewArt, widget: boolean, default: true, hint: "When someone shares a piece, chat apps show a card. Turn off to show only the title." }
+          - label: Visitor counting
+            name: analytics
+            widget: object
+            collapsed: true
+            summary: "{{fields.provider}}"
+            hint: "Optional. Counts visits without cookies (Plausible, GoatCounter) or with Google Analytics. Not used if a visitor has Do Not Track on."
+            fields:
+              - { label: Service, name: provider, widget: select, default: none, options: [{ label: Off, value: none }, { label: Plausible, value: plausible }, { label: GoatCounter, value: goatcounter }, { label: Google Analytics, value: google }] }
+              - { label: "ID", name: id, widget: string, required: false, hint: "Plausible: your site domain (asitwashere.com). GoatCounter: your code (the part before .goatcounter.com). Google: the G-XXXXXXX measurement ID." }
+          - label: About text
+            name: about
+            widget: list
+            field: { label: Paragraph, name: paragraph, widget: text }
+            hint: "One item per paragraph."
+          - label: Substack
+            name: substack
+            widget: object
+            fields:
+              - { label: Substack name, name: handle, widget: string, required: false, hint: "The part before .substack.com. Leave empty to hide." }
+              - { label: Custom domain feed address, name: feedUrl, widget: string, required: false, hint: "Only if your Substack uses its own domain, e.g. https://yourdomain.com/feed" }
+          - label: Instagram
+            name: instagram
+            widget: object
+            fields:
+              - { label: Instagram username, name: handle, widget: string, required: false, hint: "Without the @." }
+              - label: Posts shown on the Photographs page
+                name: photoPosts
+                widget: list
+                required: false
+                field: { label: Post link, name: link, widget: string }
+                hint: "Paste the link to each Instagram post."
+              - label: Posts shown on the Drawings page
+                name: drawingPosts
+                widget: list
+                required: false
+                field: { label: Post link, name: link, widget: string }
+                hint: "Paste the link to each Instagram post."
