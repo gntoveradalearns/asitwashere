@@ -1,25 +1,25 @@
 {
   "items": [
     {
-      "title": "sample drawing one",
-      "year": "2026",
-      "medium": "ink on paper",
-      "src": "images/sample-2.svg",
-      "alt": "placeholder image"
-    },
-    {
-      "title": "sample drawing two",
+      "title": "20250714.01",
+      "src": "/images/drawings/20250714.01.jpg",
       "year": "2025",
-      "medium": "pencil on paper",
-      "src": "images/sample-4.svg",
-      "alt": "placeholder image"
+      "medium": "ink on paper",
+      "alt": "abstract pen drawing"
     },
     {
-      "title": "sample drawing three",
-      "year": "2024",
-      "medium": "marker and ballpoint",
-      "src": "images/sample-6.svg",
-      "alt": "placeholder image"
+      "title": "20250718.01",
+      "src": "/images/drawings/20250718.01.jpg",
+      "year": "2025",
+      "medium": "pen on paper",
+      "alt": "abstract pen drawing"
+    },
+    {
+      "title": "20250718.01",
+      "src": "/images/drawings/20250722.01.jpg",
+      "year": "2025",
+      "medium": "pen on paper",
+      "alt": "abstract pen drawing"
     }
   ]
 }
