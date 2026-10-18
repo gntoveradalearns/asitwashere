@@ -1,7 +1,14 @@
 {
   "name": "asitwashere",
-  "tagline": "photographs, drawings and musings",
-  "email": "",
+  "tagline": "photographs, drawings, and musings",
+  "email": "asitwashere@gmail.com",
+  "protect": true,
+  "siteUrl": "asitwashere.netlify.app",
+  "previewArt": true,
+  "analytics": {
+    "provider": "none",
+    "id": ""
+  },
   "about": [
     "replace this with a short paragraph about you and your work.",
     "a second paragraph is optional. say what you make, what you care about, and how people can reach you."
@@ -14,12 +21,5 @@
     "handle": "",
     "photoPosts": [],
     "drawingPosts": []
-  },
-  "protect": true,
-  "siteUrl": "",
-  "previewArt": true,
-  "analytics": {
-    "provider": "none",
-    "id": ""
   }
 }
