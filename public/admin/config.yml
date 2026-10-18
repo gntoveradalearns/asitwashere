@@ -1,7 +1,7 @@
 # Editor settings. Change the repo line below to your own GitHub repo (see SETUP-EDITOR.md).
 backend:
   name: github
-  repo: YOUR-GITHUB-USERNAME/YOUR-REPO-NAME
+  repo: gntoveradalearns/asitwashere
   branch: main
 
 # uploaded images are saved here, and referenced by this path in the content files
